@@ -39,7 +39,7 @@ function Weather() {
       {weather && (<>
         <div>
             <h1 className=" font-bold text-4xl text-white mt-16">{weather.data.name}</h1>
-            <p className="my-6 text-2xl">Temp is: {weather.data.main.temp}</p>
+            <p className="my-6 text-2xl">Temp is: {Math.round(weather.data.main.temp - 273)}</p>
             <p className="my-6 text-xl">{weather.data.weather[0].description}</p>
         </div>
       </>)}
